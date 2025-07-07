@@ -4,7 +4,8 @@ from db import init_db, register_user, login_user, save_upload, get_user_history
 from openai import OpenAI
 
 # 🔐 Your OpenAI API Key — paste your key here directly
-client = OpenAI(api_key="sk-...")  # Replace with your real key
+client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
+ # Replace with your real key
 
 # --- INIT DB ---
 init_db()
